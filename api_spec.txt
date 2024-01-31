@@ -1,0 +1,36 @@
+Search Products
+    Method: GET
+    Endpoint: /api/products/search
+    Description: Tìm kiếm các sản phẩm dựa trên một từ khóa và trả về các kết quả phân trang.
+Query Parameters:
+    keyword (string, required): Từ khóa để tìm kiếm sản phẩm.
+    page (number, optional): Trang hiện tại để phân trang (mặc định là 1 nếu không được cung cấp).
+Response:
+    200 OK: Danh sách các sản phẩm được tìm kiếm thành công.
+        product listing (array): Mảng chứa các sản phẩm được tìm kiếm.
+            name (string): Tên của sản phẩm.
+            priceUsd (number): Giá của sản phẩm (đơn vị: USD).
+            imageUrl (string): URL của hình ảnh đại diện cho sản phẩm.
+
+        dummy response:
+            {
+                "products": [
+                    {
+                        "name": "Product 1",
+                        "priceUsd": 10.99,
+                        "imageUrl": "https://example.com/image1.jpg"
+                    },
+                    {
+                        "name": "Product 2",
+                        "priceUsd": 19.99,
+                        "imageUrl": "https://example.com/image2.jpg"
+                    },
+                    {
+                        "name": "Product 3",
+                        "priceUsd": 15.49,
+                        "imageUrl": "https://example.com/image3.jpg"
+                    }
+                ]
+            }
+    
+
